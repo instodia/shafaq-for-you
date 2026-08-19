@@ -1,0 +1,21 @@
+{
+  "name": "digishakti-student-portal",
+  "version": "2.0.0",
+  "description": "View student details and e-KYC status using roll number and college from https://aadhaar.digishaktiup.in/EPramaan/SendServiceToEpramaan",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "digishakti",
+    "aktu",
+    "student-details",
+    "roll-number",
+    "college",
+    "epramaan",
+    "aadhaar-ekyc"
+  ],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,678 @@
+[
+  {
+    "id": 41,
+    "name": "ACHARYA NARENDRA DEVA UNIVERSITY OF AGRICULTURE AND TECHNOLOGY, AYODHYA"
+  },
+  {
+    "id": 280,
+    "name": "AGRA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 258,
+    "name": "Agravan Heritage University"
+  },
+  {
+    "id": 281,
+    "name": "ALIGARH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 49,
+    "name": "ALIGARH MUSLIM UNIVERSITY (AMU), ALIGARH"
+  },
+  {
+    "id": 48,
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, GORAKHPUR"
+  },
+  {
+    "id": 47,
+    "name": "ALL INDIA INSTITUTE OF MEDICAL SCIENCES, RAEBARELI"
+  },
+  {
+    "id": 252,
+    "name": "Amity University Noida, Gautam Buddh Nagar"
+  },
+  {
+    "id": 345,
+    "name": "AMROHA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 255,
+    "name": "ATAL BIHARI VAJPAYEE MEDICAL UNIVERSITY"
+  },
+  {
+    "id": 283,
+    "name": "AURAIYA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 301,
+    "name": "AYODHYA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 284,
+    "name": "AZAMGARH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 53,
+    "name": "BABASAHEB BHIMRAO AMBEDKAR UNIVERSITY, LUCKNOW"
+  },
+  {
+    "id": 231,
+    "name": "Babu Banarasi Das University, Lucknow"
+  },
+  {
+    "id": 285,
+    "name": "BAGHPAT DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 286,
+    "name": "BAHRAICH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 287,
+    "name": "BALLIA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 54,
+    "name": "BANARAS HINDU UNIVERSITY, VARANASI"
+  },
+  {
+    "id": 288,
+    "name": "BANDA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 42,
+    "name": "BANDA UNIVERSITY OF AGRICULTURE AND TECHNOLOGY, BANDA"
+  },
+  {
+    "id": 289,
+    "name": "BARABANKI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 290,
+    "name": "BAREILLY DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 225,
+    "name": "Bareilly International University, Bareilly"
+  },
+  {
+    "id": 291,
+    "name": "BASTI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 240,
+    "name": "BENNETT UNIVERSITY, Grater Noida, Gautambuddh Nagar"
+  },
+  {
+    "id": 44,
+    "name": "BHATKHANDE SANSKRITI VISHWAVIDYALAY"
+  },
+  {
+    "id": 293,
+    "name": "BIJNOR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 31,
+    "name": "BOARD OF TECHNICAL EDUCATION DEPARTMENT, UTTAR PRADESH"
+  },
+  {
+    "id": 294,
+    "name": "BUDAUN DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 295,
+    "name": "BULANDSHAHAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 1,
+    "name": "BUNDELKHAND UNIVERSITY"
+  },
+  {
+    "id": 267,
+    "name": "Central Institute for Higher Tibetan Studies University"
+  },
+  {
+    "id": 296,
+    "name": "CHANDAULI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 40,
+    "name": "CHANDRA SHEKHAR AZAD UNIVERSITY OF AGRICULTURE AND TECHNOLOGY, KANPUR"
+  },
+  {
+    "id": 8,
+    "name": "CHAUDHARY CHARAN SINGH UNIVERSITY"
+  },
+  {
+    "id": 3,
+    "name": "CHHATRAPATI SHAHU JI MAHARAJ UNIVERSITY"
+  },
+  {
+    "id": 297,
+    "name": "CHITRAKOOT DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 9,
+    "name": "DEEN DAYAL UPADHYAYA  GORAKHPUR UNIVERSITY"
+  },
+  {
+    "id": 298,
+    "name": "DEORIA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 70,
+    "name": "DEPARTMENT OF PLANNING (UNIVERSITY)"
+  },
+  {
+    "id": 32,
+    "name": "DIRECTORATE OF MEDICAL EDUCATION"
+  },
+  {
+    "id": 34,
+    "name": "DIRECTORATE OF MSME"
+  },
+  {
+    "id": 10,
+    "name": "DR RAM MANOHAR LOHIYA NATIONAL LAW UNIVERSITY"
+  },
+  {
+    "id": 5,
+    "name": "DR. A.P.J. ABDUL KALAM TECHNICAL UNIVERSITY"
+  },
+  {
+    "id": 11,
+    "name": "DR. BHIMRAO AMBEDKAR UNIVERSITY"
+  },
+  {
+    "id": 12,
+    "name": "DR. RAM MANOHAR LOHIA AVADH UNIVERSITY"
+  },
+  {
+    "id": 46,
+    "name": "DR. SHAKUNTALA MISHRA NATIONAL REHABILITATION UNIVERSITY"
+  },
+  {
+    "id": 232,
+    "name": "Era University, Lucknow"
+  },
+  {
+    "id": 299,
+    "name": "ETAH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 300,
+    "name": "ETAWAH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 238,
+    "name": "F S University, Shikohabad, Firozabad"
+  },
+  {
+    "id": 302,
+    "name": "FARRUKHABAD DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 303,
+    "name": "FATEHPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 304,
+    "name": "FIROZABAD DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 230,
+    "name": "Galgotias University , Gautam Buddh Nagar"
+  },
+  {
+    "id": 65,
+    "name": "GAUTAM BUDHHA UNIVERSITY"
+  },
+  {
+    "id": 305,
+    "name": "GAUTAMBUDDHANAGAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 306,
+    "name": "GHAZIABAD DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 307,
+    "name": "GHAZIPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 224,
+    "name": "GLA UNIVERSITY, MATHURA"
+  },
+  {
+    "id": 308,
+    "name": "GONDA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 309,
+    "name": "GORAKHPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 277,
+    "name": "Guru Jambheshwar University"
+  },
+  {
+    "id": 22,
+    "name": "HARCOURT BUTLER TECHNICAL UNIVERSITY, KANPUR"
+  },
+  {
+    "id": 310,
+    "name": "HARDOI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 321,
+    "name": "HATHRAS DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 60,
+    "name": "IERT ALLAHABAD"
+  },
+  {
+    "id": 244,
+    "name": "IFTM University, Moradabad"
+  },
+  {
+    "id": 247,
+    "name": "IILM UNIVERSITY GREATER NOIDA"
+  },
+  {
+    "id": 248,
+    "name": "IIMT University, Meerut"
+  },
+  {
+    "id": 235,
+    "name": "Integral University, Lucknow"
+  },
+  {
+    "id": 243,
+    "name": "INVERTIS UNIVERSITY, BAREILLY"
+  },
+  {
+    "id": 233,
+    "name": "J.S. University, Shikohabad"
+  },
+  {
+    "id": 347,
+    "name": "Jagadguru Rambhadracharya Divyang State University"
+  },
+  {
+    "id": 311,
+    "name": "JALAUN DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 13,
+    "name": "JANNAYAK CHANDRA SHEKHAR UNIVERSITY"
+  },
+  {
+    "id": 312,
+    "name": "JAUNPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 245,
+    "name": "Jaypee University Anoopshahr"
+  },
+  {
+    "id": 313,
+    "name": "JHANSI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 264,
+    "name": "K.M. (Krishna Mohan) University"
+  },
+  {
+    "id": 314,
+    "name": "KANNAUJ DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 315,
+    "name": "KANPUR DEHAT DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 316,
+    "name": "KANPUR NAGAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 317,
+    "name": "KAUSHAMBI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 14,
+    "name": "KHWAJA MOINUDDIN CHISHTI LANGUAGE UNIVERSITY"
+  },
+  {
+    "id": 331,
+    "name": "KUSHINAGAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 318,
+    "name": "LAKHIMPUR KHERI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 274,
+    "name": "Lal Bahadur Shastri Paramedical Skill and Training Council"
+  },
+  {
+    "id": 319,
+    "name": "LALITPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 320,
+    "name": "LUCKNOW DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 275,
+    "name": "Maa Pateshawari University"
+  },
+  {
+    "id": 62,
+    "name": "MAA SHAKUMBHARI UNIVERSITY, SAHARANPUR"
+  },
+  {
+    "id": 276,
+    "name": "Maa Vindhyavasini University"
+  },
+  {
+    "id": 30,
+    "name": "MADAN MOHAN MALAVIYA  UNIVERSITY OF TECHNOLOGY, GORAKHPUR"
+  },
+  {
+    "id": 64,
+    "name": "MAHARAJA SUHEL DEV STATE UNIVERSITY, AZAMGARH"
+  },
+  {
+    "id": 348,
+    "name": "Maharishi Mahesh Yogi Ramayan University,Ayodhya"
+  },
+  {
+    "id": 256,
+    "name": "Maharishi University of Information and technologies"
+  },
+  {
+    "id": 15,
+    "name": "MAHATMA GANDHI KASHI VIDYAPITH"
+  },
+  {
+    "id": 16,
+    "name": "MAHATMA JOTIBA PHULE ROHILKHAND UNIVERSITY"
+  },
+  {
+    "id": 260,
+    "name": "Mahaveer University"
+  },
+  {
+    "id": 249,
+    "name": "Mahayogi Gorakhnath University Gorakhpur, Arogya Dham, Balapar Road, Sonbarsa, Gorakhpur - 273007"
+  },
+  {
+    "id": 270,
+    "name": "Mahayogi Guru Gorakhnath AYUSH University"
+  },
+  {
+    "id": 323,
+    "name": "MAHOBA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 322,
+    "name": "MAHRAJGANJ DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 324,
+    "name": "MAINPURI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 349,
+    "name": "Major Dhyan Chand Sports University"
+  },
+  {
+    "id": 257,
+    "name": "Major S.D. Singh University"
+  },
+  {
+    "id": 246,
+    "name": "Mangalayatan University, Aligarh"
+  },
+  {
+    "id": 325,
+    "name": "MATHURA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 326,
+    "name": "MAU DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 327,
+    "name": "MEERUT DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 328,
+    "name": "MIRZAPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 253,
+    "name": "Mohammad Ali Jauhar University Rampur (U.P)"
+  },
+  {
+    "id": 250,
+    "name": "MONAD UNIVERSITY, HAPUR"
+  },
+  {
+    "id": 329,
+    "name": "MORADABAD DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 330,
+    "name": "MUZAFFARNAGAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 279,
+    "name": "Nehru Gram Bharti University"
+  },
+  {
+    "id": 242,
+    "name": "Noida International University, Grater Noida, Gautambuddh Nagar"
+  },
+  {
+    "id": 45,
+    "name": "PANDIT DEEN DAYAL UPADHYAYA PASHU CHIKITSA VIGYAN VISHWAVIDYALAYA EVAM GO ANUSANDHAN SANSTHAN"
+  },
+  {
+    "id": 332,
+    "name": "PILIBHIT DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 333,
+    "name": "PRATAPGARH DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 282,
+    "name": "PRAYAGRAJ DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 17,
+    "name": "PROF. RAJENDRA SINGH (RAJJU BHAIYA) UNIVERSITY"
+  },
+  {
+    "id": 334,
+    "name": "RAEBARELI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 63,
+    "name": "RAJA MAHENDRA PRATAP SINGH STATE UNIVERSITY, ALIGARH"
+  },
+  {
+    "id": 55,
+    "name": "RAJIV GANDHI NATIONAL AVIATION UNIVERSITY, AMETHI"
+  },
+  {
+    "id": 227,
+    "name": "RAMA UNIVERSITY UTTAR PRADESH KANPUR"
+  },
+  {
+    "id": 335,
+    "name": "RAMPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 346,
+    "name": "Rani Lakshmi Bai Central Agricultural University Jhansi"
+  },
+  {
+    "id": 336,
+    "name": "SAHARANPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 43,
+    "name": "SAM HIGGINBOTTOM UNIVERSITY OF AGRICULTURE, TECHNOLOGY AND SCIENCES, PRAYAGRAJ"
+  },
+  {
+    "id": 19,
+    "name": "SAMPURNANAND SANSKRIT VISHWAVIDYALAYA"
+  },
+  {
+    "id": 271,
+    "name": "Sanjay Gandhi Postgraduate Institute of Medical Sciences (SGPGIMS)"
+  },
+  {
+    "id": 237,
+    "name": "Sanskriti University, Mathura"
+  },
+  {
+    "id": 292,
+    "name": "SANT RAVIDAS NAGAR BHADOHI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 39,
+    "name": "SARDAR VALLABHBHAI PATEL UNIVERSITY OF AGRICULTURE &amp; TECHNOLOGY, MEERUT"
+  },
+  {
+    "id": 262,
+    "name": "SDGI Global University"
+  },
+  {
+    "id": 75,
+    "name": "SECONDARY EDUCATION UNIVERSITY"
+  },
+  {
+    "id": 337,
+    "name": "SHAHJAHANPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 226,
+    "name": "SHARDA UNIVERSITY, Grater Noida, Gautambuddh Nagar"
+  },
+  {
+    "id": 266,
+    "name": "Shobhit Institute of Engineering &amp; Technology Deemed To be University"
+  },
+  {
+    "id": 239,
+    "name": "Shobhit University, Gangoh, Sharanpur"
+  },
+  {
+    "id": 338,
+    "name": "SHRAVASTI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 241,
+    "name": "Shri Ramswaroop Memorial University, Lucknow"
+  },
+  {
+    "id": 234,
+    "name": "SHRI VENKATESHWARA UNIVERSITY, GAJRAULA JYOTIBAFULE NAGAR"
+  },
+  {
+    "id": 18,
+    "name": "SIDDHARTH UNIVERSITY"
+  },
+  {
+    "id": 339,
+    "name": "SIDDHARTHNAGAR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 340,
+    "name": "SITAPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 341,
+    "name": "SONEBHADRA DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 2,
+    "name": "STATE COUNCIL FOR VOCATIONAL TRAINING"
+  },
+  {
+    "id": 342,
+    "name": "SULTANPUR DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 251,
+    "name": "Swami Vivekanand Subharti University, Meerut"
+  },
+  {
+    "id": 265,
+    "name": "T.S. Mishra University"
+  },
+  {
+    "id": 228,
+    "name": "Teerthanker Mahaveer University,  Moradabad"
+  },
+  {
+    "id": 229,
+    "name": "THE GLOCAL UNIVERSITY, SHARANPUR"
+  },
+  {
+    "id": 35,
+    "name": "U.P. STATE MEDICAL FACULTY"
+  },
+  {
+    "id": 236,
+    "name": "UNITED UNIVERSITY, PRAYAGRAJ"
+  },
+  {
+    "id": 50,
+    "name": "UNIVERSITY OF ALLAHABAD, ALLAHABAD"
+  },
+  {
+    "id": 4,
+    "name": "UNIVERSITY OF LUCKNOW"
+  },
+  {
+    "id": 343,
+    "name": "UNNAO DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 61,
+    "name": "UPDESCO UNIVERSITY"
+  },
+  {
+    "id": 20,
+    "name": "UTTAR PRADESH RAJARSHI TANDON OPEN UNIVERSITY"
+  },
+  {
+    "id": 33,
+    "name": "UTTAR PRADESH SKILL DEVELOPMENT MISSION"
+  },
+  {
+    "id": 273,
+    "name": "Uttar Pradesh State Institute of Forensic Science"
+  },
+  {
+    "id": 344,
+    "name": "VARANASI DISTRICT INSTITUTE OF EDUCATION AND TRAINING"
+  },
+  {
+    "id": 268,
+    "name": "Varun Arjun University"
+  },
+  {
+    "id": 21,
+    "name": "VEER BAHADUR SINGH PURVANCHAL UNIVERSITY"
+  },
+  {
+    "id": 278,
+    "name": "Vivek University"
+  }
+]

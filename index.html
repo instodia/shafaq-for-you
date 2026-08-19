@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50 antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiShakti & UP Student Verification Portal</title>
+  <meta name="description" content="View student details, college enrollment records, Aadhaar e-KYC status, and AKTU semester results directly from UP DigiShakti and University portals." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            digi: {
+              50: '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="min-h-full flex flex-col relative text-slate-800 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+
+  <!-- Background Decorative Glowing Blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+
+  <!-- Header / Navigation -->
+  <header id="header-nav" class="relative z-20 w-full border-b border-slate-200/60 bg-white/80 backdrop-blur-md sticky top-0">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-500 via-amber-500 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-orange-200">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 flex items-center gap-1.5">
+            DigiShakti <span class="text-orange-600 font-semibold text-xs sm:text-sm px-2 py-0.5 rounded-full bg-orange-50 border border-orange-200">UP Student Portal</span>
+          </span>
+          <p class="text-[11px] text-slate-500 hidden sm:block">Government of Uttar Pradesh • Swami Vivekanand Yuva Sashaktikaran Yojana</p>
+        </div>
+      </div>
+
+      <div class="flex items-center space-x-3">
+        <div class="hidden md:flex items-center text-xs text-slate-600 bg-slate-100/90 px-3 py-1.5 rounded-full border border-slate-200/70">
+          <span class="w-2 h-2 mr-2 bg-emerald-500 rounded-full animate-pulse"></span>
+          EPramaan Live Connected
+        </div>
+        <a href="https://digishakti.up.gov.in" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-orange-600 bg-orange-50 hover:bg-orange-100 px-3 py-1.5 rounded-lg border border-orange-200 transition-colors flex items-center gap-1">
+          <span>Official Portal</span>
+          <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-10 relative z-10">
+
+    <!-- Navigation Tabs Switcher -->
+    <div id="nav-tabs-wrapper" class="mb-8 max-w-xl mx-auto">
+      <div class="bg-slate-200/70 p-1.5 rounded-2xl flex items-center justify-center gap-1 shadow-inner border border-slate-300/40">
+        <button id="tab-digishakti" onclick="switchTab('digishakti')" class="nav-tab-btn active flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 transition-all text-slate-600">
+          <i data-lucide="search" class="w-4 h-4 text-orange-500"></i>
+          <span>DigiShakti Verification</span>
+        </button>
+        <button id="tab-aktu" onclick="switchTab('aktu')" class="nav-tab-btn flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 transition-all text-slate-600">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-indigo-500"></i>
+          <span>AKTU Exam Results</span>
+        </button>
+        <button id="tab-guide" onclick="switchTab('guide')" class="nav-tab-btn flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-1.5 transition-all text-slate-600">
+          <i data-lucide="help-circle" class="w-4 h-4 text-emerald-500"></i>
+          <span>e-KYC Guide</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: DIGISHAKTI STUDENT SEARCH (DEFAULT) -->
+    <!-- ========================================== -->
+    <section id="section-digishakti" class="space-y-8">
+      <!-- Search Header -->
+      <div class="text-center max-w-2xl mx-auto mb-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-100/80 text-orange-800 border border-orange-200 mb-3">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+          Tablet & Smartphone Distribution Scheme
+        </div>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+          Search Student Details <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-indigo-600">by Roll Number & College</span>
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Fetch verified enrollment details, academic records, and Aadhaar e-KYC status directly from <code class="bg-slate-100 text-orange-700 px-1.5 py-0.5 rounded font-mono text-[11px]">aadhaar.digishaktiup.in</code>.
+        </p>
+      </div>
+
+      <!-- DigiShakti Search Form Card -->
+      <div class="glass-panel rounded-2xl shadow-xl shadow-slate-200/50 p-6 md:p-8 border border-white/70">
+        <form id="digishakti-form" class="space-y-6">
+          
+          <!-- Step 1: University Selector -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="university-select" class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                <i data-lucide="building-2" class="w-4 h-4 text-orange-500"></i>
+                <span>1. University / Board / Council</span>
+              </label>
+              <span class="text-[11px] text-slate-400 font-medium">169 UP State & Technical Universities</span>
+            </div>
+
+            <!-- University Dropdown -->
+            <select
+              id="university-select"
+              class="w-full py-3 px-3.5 rounded-xl border border-slate-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 text-sm font-semibold text-slate-800 bg-white transition-all outline-none"
+            >
+              <option value="">-- Select University / Board --</option>
+            </select>
+
+            <!-- Quick Presets -->
+            <div class="mt-2.5 flex flex-wrap items-center gap-1.5">
+              <span class="text-[11px] text-slate-400 font-medium mr-1">Quick Select:</span>
+              <button type="button" onclick="selectQuickUniversity(5)" class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition-colors">
+                AKTU (Technical Univ)
+              </button>
+              <button type="button" onclick="selectQuickUniversity(4)" class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors">
+                Lucknow University
+              </button>
+              <button type="button" onclick="selectQuickUniversity(31)" class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors">
+                BTEUP (Polytechnic)
+              </button>
+              <button type="button" onclick="selectQuickUniversity(8)" class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors">
+                CCSU Meerut
+              </button>
+              <button type="button" onclick="selectQuickUniversity(3)" class="px-2.5 py-0.5 rounded-md text-[11px] font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-200 transition-colors">
+                CSJMU Kanpur
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: College / Institution Selector with Instant Search -->
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="college-filter" class="text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+                <i data-lucide="landmark" class="w-4 h-4 text-orange-500"></i>
+                <span>2. College / Institution</span>
+              </label>
+              <span id="college-count-badge" class="text-[11px] text-orange-600 bg-orange-50 px-2 py-0.5 rounded-full font-bold">
+                Select university first
+              </span>
+            </div>
+
+            <!-- Search input filter for college dropdown -->
+            <div class="relative mb-2">
+              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+                <i data-lucide="search" class="w-4 h-4"></i>
+              </div>
+              <input
+                type="text"
+                id="college-filter"
+                placeholder="Type to filter colleges (e.g. BBD, ABES, Galgotias, Bareilly, Kanpur...)"
+                class="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-slate-200 bg-slate-50/70 focus:bg-white focus:border-orange-400 focus:outline-none transition-all"
+                oninput="filterColleges()"
+              />
+            </div>
+
+            <!-- College Dropdown -->
+            <select
+              id="college-select"
+              class="w-full py-3 px-3.5 rounded-xl border border-slate-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 text-xs sm:text-sm font-medium text-slate-800 bg-white transition-all outline-none"
+            >
+              <option value="">-- Select College / Institute --</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Roll Number / Enrollment Number & Captcha Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-4">
+            
+            <!-- Roll / Enrollment No Input -->
+            <div class="md:col-span-6">
+              <label for="enrollment-input" class="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2 flex items-center gap-1.5">
+                <i data-lucide="hash" class="w-4 h-4 text-orange-500"></i>
+                <span>3. Enrollment No. / Roll No.</span>
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="enrollment-input"
+                  placeholder="e.g. 2500541530140 or 250054153107113"
+                  class="w-full py-3 px-3.5 rounded-xl border border-slate-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 text-sm font-mono font-bold text-slate-900 bg-white transition-all outline-none"
+                  required
+                />
+              </div>
+              <div class="mt-1.5 flex items-center gap-1 text-[11px] text-slate-500">
+                <span>1-Click Test:</span>
+                <button type="button" onclick="fillSampleStudent('2500541530140', 5, 11041, true)" class="text-orange-600 font-bold hover:underline">
+                  2500541530140 (Shivanshu Shukla)
+                </button>
+              </div>
+            </div>
+
+            <!-- Live Captcha Box -->
+            <div class="md:col-span-3">
+              <label class="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
+                4. Live Captcha
+              </label>
+              <div class="flex items-center gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200">
+                <div id="captcha-img-container" class="flex-1 h-9 bg-white rounded-lg border border-slate-200 flex items-center justify-center overflow-hidden">
+                  <div id="captcha-placeholder" class="text-xs text-slate-400 font-medium">Ready</div>
+                  <img id="captcha-image" src="" alt="Captcha" class="hidden h-full object-contain" />
+                </div>
+                <button
+                  type="button"
+                  id="btn-refresh-captcha"
+                  onclick="fetchLiveCaptcha()"
+                  class="p-2 text-slate-500 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors border border-slate-200 bg-white"
+                  title="Refresh Captcha Image"
+                >
+                  <i data-lucide="rotate-cw" id="captcha-reload-icon" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Captcha Input -->
+            <div class="md:col-span-3">
+              <label for="captcha-input" class="text-xs font-bold text-slate-700 uppercase tracking-wider block mb-2">
+                Enter Captcha
+              </label>
+              <input
+                type="text"
+                id="captcha-input"
+                maxlength="6"
+                placeholder="Code (Optional)"
+                class="w-full py-3 px-3 rounded-xl border border-slate-300 focus:border-orange-500 focus:ring-4 focus:ring-orange-100 text-sm font-mono font-bold text-slate-900 bg-white transition-all uppercase outline-none text-center tracking-widest"
+              />
+            </div>
+          </div>
+
+          <!-- Submit Button & Options -->
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4 text-xs font-semibold text-slate-600">
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="residence-type" value="I" checked class="text-orange-600 focus:ring-orange-500" />
+                <span>Indian Student</span>
+              </label>
+              <label class="inline-flex items-center gap-1.5 cursor-pointer">
+                <input type="radio" name="residence-type" value="F" class="text-orange-600 focus:ring-orange-500" />
+                <span>Foreign Student</span>
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              id="digishakti-search-btn"
+              class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-orange-600 via-amber-600 to-indigo-600 hover:from-orange-700 hover:to-indigo-700 text-white font-bold text-sm rounded-xl shadow-lg shadow-orange-500/25 transition-all transform active:scale-95 cursor-pointer"
+            >
+              <span id="digi-search-label" class="flex items-center gap-2">
+                <span>Search Student Record</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+              <span id="digi-search-spinner" class="hidden flex items-center gap-2">
+                <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Searching DigiShakti...</span>
+              </span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Recent Searches List -->
+        <div id="digi-recent-searches-box" class="mt-6 pt-4 border-t border-slate-100 flex flex-wrap items-center gap-2">
+          <span class="text-xs text-slate-400 font-medium">Quick / Recent:</span>
+          <div id="digi-recent-list" class="flex flex-wrap items-center gap-1.5"></div>
+        </div>
+      </div>
+
+      <!-- Result Skeleton Loader -->
+      <div id="digi-loading-skeleton" class="hidden space-y-6 animate-pulse max-w-4xl mx-auto">
+        <div class="h-44 bg-white/80 rounded-2xl border border-slate-200/60 p-6">
+          <div class="flex items-center space-x-4 mb-4">
+            <div class="rounded-full bg-slate-200 h-14 w-14"></div>
+            <div class="flex-1 space-y-2">
+              <div class="h-4 bg-slate-200 rounded w-1/3"></div>
+              <div class="h-3 bg-slate-200 rounded w-1/4"></div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="h-8 bg-slate-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Error Card -->
+      <div id="digi-error-card" class="hidden max-w-xl mx-auto glass-panel p-6 rounded-2xl border-rose-200 text-center shadow-lg">
+        <div class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto mb-3">
+          <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 mb-1">Student Record Notice</h3>
+        <p id="digi-error-message" class="text-xs sm:text-sm text-slate-600 mb-4">No student records found matching this enrollment number and college.</p>
+        <div class="text-xs text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-100 text-left space-y-1">
+          <div class="font-bold text-slate-700 mb-1">Options:</div>
+          <div>• Click <button type="button" onclick="fillSampleStudent('2500541530140', 5, 11041, true)" class="text-orange-600 font-bold underline">here to view the verified demo record</button>.</div>
+          <div>• Check if your enrollment number is registered by your college for the tablet scheme.</div>
+        </div>
+      </div>
+
+      <!-- DigiShakti Dynamic Result Container -->
+      <div id="digi-result-container" class="hidden"></div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: AKTU NAME RESULT SEARCH -->
+    <!-- ========================================== -->
+    <section id="section-aktu" class="hidden space-y-8">
+      <div class="text-center max-w-2xl mx-auto mb-6">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-100 text-indigo-800 border border-indigo-200 mb-3">
+          <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+          Dr. A.P.J. Abdul Kalam Technical University
+        </div>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-2">
+          AKTU Semester Result <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Search by Name</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Search student semester scorecards, SGPA, total marks, and subject breakdown by full name.
+        </p>
+      </div>
+
+      <!-- AKTU Form Card -->
+      <div class="glass-panel rounded-2xl shadow-xl p-6 md:p-8 max-w-2xl mx-auto border border-white/70">
+        <form id="aktu-form" class="space-y-4">
+          <div class="flex items-center shadow-lg rounded-2xl bg-white border-2 border-indigo-100 hover:border-indigo-300 focus-within:border-indigo-600 p-1.5 transition-all">
+            <div class="pl-4 pr-2 text-slate-400">
+              <i data-lucide="search" class="w-5 h-5"></i>
+            </div>
+            <input
+              type="text"
+              id="aktu-name-input"
+              placeholder="e.g. Shivanshu Shukla or Anuradha Sharma"
+              class="w-full py-3 px-2 text-slate-900 placeholder-slate-400 focus:outline-none text-sm sm:text-base font-medium bg-transparent"
+              required
+            />
+            <button
+              type="submit"
+              id="aktu-search-btn"
+              class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md transition-all shrink-0"
+            >
+              <span id="aktu-search-label" class="flex items-center gap-1.5">
+                <span>Search Result</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </span>
+              <span id="aktu-search-spinner" class="hidden flex items-center gap-2">
+                <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span>Fetching...</span>
+              </span>
+            </button>
+          </div>
+        </form>
+
+        <div class="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs text-slate-400">
+          <span>Try sample names:</span>
+          <button type="button" onclick="searchAktuName('shivanshu shukla')" class="text-indigo-600 font-semibold hover:underline">Shivanshu Shukla</button>,
+          <button type="button" onclick="searchAktuName('anuradha sharma')" class="text-indigo-600 font-semibold hover:underline">Anuradha Sharma</button>
+        </div>
+      </div>
+
+      <!-- AKTU Result Container -->
+      <div id="aktu-result-container" class="hidden"></div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: E-KYC & TABLET SCHEME GUIDE -->
+    <!-- ========================================== -->
+    <section id="section-guide" class="hidden space-y-8">
+      <div class="text-center max-w-2xl mx-auto mb-6">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-2">
+          DigiShakti Aadhaar e-KYC & Scheme Guidelines 📘
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600">
+          Everything you need to know about completing Aadhaar authentication, resolving data mismatches, and receiving your tablet/smartphone.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/70 shadow-md">
+          <div class="w-10 h-10 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold mb-4">
+            1
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">College Data Upload</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Students do not need to manually register. Your college or university nodal officer uploads your enrollment data to the DigiShakti portal directly.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/70 shadow-md">
+          <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold mb-4">
+            2
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">MeriPehchaan (e-Pramaan)</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            If your status shows <strong>Pending</strong>, log in via MeriPehchaan with your Aadhaar-linked mobile number to complete instant OTP identity authentication.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/70 shadow-md">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold mb-4">
+            3
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Device Distribution</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Once verified and department locked, eligible final-year and technical students are scheduled for device distribution by district administration.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div class="glass-panel p-6 rounded-2xl border border-white/70 shadow-md space-y-4">
+        <h3 class="text-lg font-bold text-slate-900 pb-2 border-b border-slate-100">Frequently Asked Questions</h3>
+        
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <h4 class="font-bold text-slate-800 mb-1">Q: What should I do if I get "Invalid Enrollment Number"?</h4>
+            <p class="text-slate-600">Contact your college administrative office or DigiShakti nodal officer to confirm the exact enrollment format uploaded to the UP government portal.</p>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <h4 class="font-bold text-slate-800 mb-1">Q: My name in Aadhaar is different from college registration.</h4>
+            <p class="text-slate-600">If there is a name/DOB mismatch, update your Aadhaar card at an Aadhaar Seva Kendra and notify your college coordinator to resubmit verification.</p>
+          </div>
+          <div class="p-3 bg-slate-50 rounded-xl border border-slate-100">
+            <h4 class="font-bold text-slate-800 mb-1">Q: Is there any fee for registration or device?</h4>
+            <p class="text-slate-600">No. The Swami Vivekanand Yuva Sashaktikaran Yojana tablet/smartphone is completely free of cost provided by the UP Government.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer" class="border-t border-slate-200/60 bg-white/70 backdrop-blur-md py-6 mt-auto text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <p class="font-semibold text-slate-700">UP DigiShakti & AKTU Student Portal</p>
+        <p class="text-[11px] text-slate-400">Direct Integration with https://aadhaar.digishaktiup.in/EPramaan</p>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="https://digishakti.up.gov.in/" target="_blank" class="hover:text-orange-600 transition-colors">DigiShakti Official</a>
+        <a href="https://meripehchaan.gov.in/" target="_blank" class="hover:text-orange-600 transition-colors">MeriPehchaan</a>
+        <a href="https://aktu.ac.in/" target="_blank" class="hover:text-indigo-600 transition-colors">AKTU OneView</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xl flex items-center space-x-2">
+      <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+      <span id="toast-message">Action successful</span>
+    </div>
+  </div>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
